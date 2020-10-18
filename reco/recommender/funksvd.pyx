@@ -122,8 +122,8 @@ cdef class FunkSVD:
 
         cdef list users, items
 
-        users = list(set(X.ix[:, userField]))
-        items = list(set(X.ix[:, itemField]))
+        users = list(set(X.loc[:, userField]))
+        items = list(set(X.loc[:, itemField]))
 
         cdef double global_mean = np.mean(X.ix[:, valueField])
         cdef double learning_rate = self.learning_rate
