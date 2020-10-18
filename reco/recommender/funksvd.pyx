@@ -225,7 +225,7 @@ cdef class FunkSVD:
         predictions = []
 
         import time
-        start_time = time.clock()
+#         start_time = time.clock()
 
         if self.bias:
 
@@ -270,6 +270,6 @@ cdef class FunkSVD:
 
                 predictions.append(pred)
 
-        print("time taken {} secs".format(time.clock() - start_time))
+#         print("time taken {} secs".format(time.clock() - start_time))
 
         return predictions
